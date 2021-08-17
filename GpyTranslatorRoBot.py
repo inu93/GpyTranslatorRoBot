@@ -62,7 +62,7 @@ async def backtostart(bot, query: CallbackQuery):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("➕ Add me to a Group ➕",  url="http://t.me/GpyTranslatorRoBot?startgroup=tr")
+                    InlineKeyboardButton("➕ Add me to a Group ➕",  url="http://t.me/PenerjemahRobot?startgroup=tr")
                 ],
                 [
                     InlineKeyboardButton("🔥 Help",  callback_data="help"),
@@ -82,7 +82,7 @@ async def welcomemsg(bot, msg):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("➕ Add me to a Group ➕",  url="http://t.me/GpyTranslatorRoBot?startgroup=tr")
+                    InlineKeyboardButton("➕ Add me to a Group ➕",  url="http://t.me/PenerjemahRobot?startgroup=tr")
                 ],
                 [
                     InlineKeyboardButton("🔥 Help",  callback_data="help"),
