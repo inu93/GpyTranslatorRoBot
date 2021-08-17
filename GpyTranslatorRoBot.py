@@ -8,9 +8,9 @@ import sqlite3, string
 
 bot = Client(
     "APP_NAME",
-    api_id=,
-    api_hash="",
-    bot_token= ""
+    api_id=1870649,
+    api_hash="cbfe9a418c3d4e4253a5bad850413f2d",
+    bot_token= "1979827686:AAGl08NYz2ycrRDLXtF9c4hj9vOb-IxflNU"
 )
 
 db = sqlite3.connect("userlanguages.db")
@@ -58,7 +58,7 @@ async def check_chat(bot, msg):
         
 @bot.on_callback_query(filters.regex(r"^back"))
 async def backtostart(bot, query: CallbackQuery):
- await query.message.edit(f"Hello {query.from_user.mention}\n \U0001F60E I am GpyTranslatorRoBot \ud83e\udd16 \n\nSend any text which you would like to translate.\n\n**Available commands:**\n⊙ /help - Show this help message\n⊙ /language - Set your main language\n⊙ /tr (language code) as reply to a message in groups\n💡Example: /tr en: translates something to english",
+ await query.message.edit(f"Hello👋 {query.from_user.mention}\n \U0001F60E I am Translator Bot \ud83e\udd16 \n\nSend any text which you would like to translate.\n\n**Available commands:**\n⊙ /help - Show this help message\n⊙ /language - Set your main language\n⊙ /tr (language code) as reply to a message in groups\n💡Example: /tr en: translates something to english",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -66,11 +66,10 @@ async def backtostart(bot, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton("🔥 Help",  callback_data="help"),
-                    InlineKeyboardButton("💚 Credits",  callback_data=b"Credits")
+                    InlineKeyboardButton("👤Owner Bot",  url="https://t.me/ebnudoang"),
                 ],
                 [
-                    InlineKeyboardButton("⚠️ Source",  url="https://github.com/Mr-Dark-Prince/GpyTranslatorRoBot"),
-                    InlineKeyboardButton("⛱️ Owner",  url="https://t.me/mr_dark_prince"),
+                    InlineKeyboardButton("📍 Instagram",  url="https://www.instagram.com/ebnu_am/")
                 ]
             ]
         )
@@ -79,7 +78,7 @@ async def backtostart(bot, query: CallbackQuery):
 ##Buttons
 @bot.on_message(filters.command("start") & filters.private)
 async def welcomemsg(bot, msg):
-    await msg.reply(f"Hello {msg.from_user.mention}\n \U0001F60E I am GpyTranslatorRoBot \ud83e\udd16 \n\nSend any text which you would like to translate.\n\n**Available commands:**\n⊙ /help - Show this help message\n⊙ /language - Set your main language\n⊙ /tr (language code) as reply to a message in groups\n💡Example: /tr en: translates something to english",
+    await msg.reply(f"Hello👋 {msg.from_user.mention}\n \U0001F60E I am Translator Bot \ud83e\udd16 \n\nSend any text which you would like to translate.\n\n**Available commands:**\n⊙ /help - Show this help message\n⊙ /language - Set your main language\n⊙ /tr (language code) as reply to a message in groups\n💡Example: /tr en: translates something to english",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -87,11 +86,10 @@ async def welcomemsg(bot, msg):
                 ],
                 [
                     InlineKeyboardButton("🔥 Help",  callback_data="help"),
-                    InlineKeyboardButton("💚 Credits",  callback_data=b"Credits")
+                    InlineKeyboardButton("👤 Owner Bot",  url="https://t.me/ebnudoang"),
                 ],
                 [
-                    InlineKeyboardButton("⚠️ Source",  url="https://github.com/Mr-Dark-Prince/GpyTranslatorRoBot"),
-                    InlineKeyboardButton("⛱️ Owner",  url="https://t.me/mr_dark_prince"),
+                    InlineKeyboardButton("📍 Instagram",  url="https://www.instagram.com/ebnu_am/"),
                 ]
             ]
         )
@@ -99,7 +97,7 @@ async def welcomemsg(bot, msg):
 #Setup Help Message with buttons    
 @bot.on_callback_query(filters.regex(r"^help"))
 async def helpbutton(bot: Client, query: CallbackQuery):
-    await query.message.edit("**GpyTranslateRoBot**\n\nGpyTranslate is a word 'G+Py+Translate' which means 'Google Python Translate'. A bot to help you translate text (with emojis) to few Languages from any other language in world.\n\nGpyTranslatorRoBot is able to detect a wide variety of languages because he is a grand son of Google Translate API.\n\nYou can use GpyTranslatorRoBot in his private chat & Groups.\n\n**How To Use**\nJust send copied text or forward message with other language to GpyTranslator Bot and you'll receive a translation of the message in the language of your choice. Send /language command to know which language is available.",
+    await query.message.edit("**Translator Bot**\n\nTranslator Bot is a word 'Translate' which means 'Google Python Translate'. A bot to help you translate text (with emojis) to few Languages from any other language in world.\n\nTranslator Bot is able to detect a wide variety of languages because he is a grand son of Google Translate API.\n\nYou can use Translator Bot in his private chat & Groups.\n\n**How To Use**\nJust send copied text or forward message with other language to Translator Bot and you'll receive a translation of the message in the language of your choice. Send /language command to know which language is available.",
         reply_markup=InlineKeyboardMarkup(
             [
                 [InlineKeyboardButton("⬅️ Go Back ⬅️", callback_data="back")],
@@ -115,7 +113,7 @@ async def credits(bot: Client, query: CallbackQuery):
 # user sent /help command, configure the message that the bot should send   
 @bot.on_message(filters.private & filters.command("help"))
 async def help(bot, msg):
-    await msg.reply_text(f"**GpyTranslateRoBot**\n\nGpyTranslate is a word 'G+Py+Translate' which means 'Google Python Translate'. A bot to help you translate text (with emojis) to few Languages from any other language in world.\n\nGpyTranslatorRoBot is able to detect a wide variety of languages because he is a grand son of Google Translate API.\n\nYou can use GpyTranslatorRoBot in his private chat & Groups.\n\n**How To Use**\nJust send copied text or forward message with other language to GpyTranslator Bot and you'll receive a translation of the message in the language of your choice. Send /language command to know which language is available.")
+    await msg.reply_text(f"**Translator Bot**\n\nTranslator Bot is a word 'Translate' which means 'Google Python Translate'. A bot to help you translate text (with emojis) to few Languages from any other language in world.\n\nTranslator Bot is able to detect a wide variety of languages because he is a grand son of Google Translate API.\n\nYou can use Translator Bot in his private chat & Groups.\n\n**How To Use**\nJust send copied text or forward message with other language to GpyTranslator Bot and you'll receive a translation of the message in the language of your choice. Send /language command to know which language is available.")
 
 ##When the user sent /language command, configure the message that the bot should send
 @bot.on_message(filters.private & filters.command("language"))
